@@ -1,0 +1,129 @@
+/* @tailwind base; */
+@tailwind components;
+@tailwind utilities;
+
+/** Base Styles */
+:root {
+  /**
+   * Colors
+   * --------------------------------------------------------------------- */
+
+  --c-white: #ffffff;
+  --c-white-dark: #f8f8f8;
+  --c-black: #000000;
+
+  --c-divider-light: rgba(60, 60, 67, 0.12);
+  --c-divider-dark: rgba(84, 84, 88, 0.48);
+
+  --c-text-light-1: #2c3e50;
+  --c-text-light-2: #476582;
+  --c-text-light-3: #90a4b7;
+
+  --c-brand: #F50057;
+  --c-brand-light: #4abf8a;
+
+  /**
+   * Typography
+   * --------------------------------------------------------------------- */
+
+  --font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  --font-family-mono: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+
+  /**
+   * Z Indexes
+   *
+   * Algolia SearchBox has a z-index of 200, so make sure not to go above
+   * that value.
+   * --------------------------------------------------------------------- */
+
+  --z-index-navbar: 10;
+  --z-index-sidebar: 6;
+
+  /**
+   * Shadows
+   * --------------------------------------------------------------------- */
+
+  --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-2: 0 3px 12px rgba(0, 0, 0, 0.07), 0 1px 4px rgba(0, 0, 0, 0.07);
+  --shadow-3: 0 12px 32px rgba(0, 0, 0, 0.1), 0 2px 6px rgba(0, 0, 0, 0.08);
+  --shadow-4: 0 14px 44px rgba(0, 0, 0, 0.12), 0 3px 9px rgba(0, 0, 0, 0.12);
+  --shadow-5: 0 18px 56px rgba(0, 0, 0, 0.16), 0 4px 12px rgba(0, 0, 0, 0.16);
+
+  /**
+   * Sizes
+   * --------------------------------------------------------------------- */
+
+  --header-height: 3.6rem;
+}
+
+#app {
+  @apply relative;
+}
+
+#app > .theme {
+  @apply flex flex-row items-start justify-center;
+}
+
+.nav-bar:not(.open) {
+  @apply navbar:!hidden;
+}
+
+.sidebar {
+  @apply min-w-[300px] navbar:!top-0 navbar:!w-80 32xl:!w-full 32xl:!max-w-lg !w-0 !border-none bg-gradient-to-b from-gray-50 to-white flex flex-col h-full !justify-start items-end overflow-x-hidden;
+}
+
+.sidebar.open {
+  @apply !w-80 fixed bottom-0 flex-col !bg-white;
+  top: var(--header-height);
+}
+
+.sidebar.open .nav.nav-links {
+  @apply w-full;
+}
+
+.sidebar > .sidebar-links {
+  @apply relative 32xl:!w-80 min-h-0 !w-full;
+}
+
+.sidebar-links .sidebar-links .sidebar-links {
+  @apply hidden;
+}
+
+.page {
+  @apply !m-0 navbar:!pl-[320px] w-full navbar:!pt-8;
+}
+
+.page > .container{
+  @apply max-w-2xl ml-4 2xl:ml-[300px] md:ml-8;
+}
+
+h1 {
+  @apply !text-[2.5rem] font-bold;
+}
+
+.theme .custom-block {
+  @apply shadow-lg shadow-gray-50 border-none rounded-lg;
+}
+
+a.header-anchor {
+  @apply opacity-100 transition-colors duration-300;
+}
+
+.table-of-contents {
+  @apply my-10;
+}
+
+.table-of-contents > ul > li > a {
+  @apply font-bold;
+}
+
+.table-of-contents a {
+  /* @apply text-gray-800 font-medium; */
+}
+
+/* a.sidebar-link-item {
+  @apply hover:text-purple-600;
+} */
