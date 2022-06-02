@@ -20,3 +20,13 @@ router.Connect("/test", callback)
 router.Options("/test", callback)
 router.Trace("/test", callback)
 ```
+
+Sometimes you may need to register a route that responds to multiple HTTP methods.
+To do so register the route with `router.Match`
+```go
+router.Match("/test", callback, http.MethodGet, http.MethodPost, ...)
+
+// since Match is a variadic function you can also pass it like below
+httpMethods := []string{http.MethodPut, http.MethodPatch}
+router.Match("/test", callback, httpMethods...)
+```
