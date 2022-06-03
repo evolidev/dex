@@ -30,3 +30,9 @@ router.Match("/test", callback, http.MethodGet, http.MethodPost, ...)
 httpMethods := []string{http.MethodPut, http.MethodPatch}
 router.Match("/test", callback, httpMethods...)
 ```
+
+Sometimes you want that one route responds to all HTTP methods.
+If so you can define it with `router.Any`
+```go
+router.Any("/test", callback)
+```
