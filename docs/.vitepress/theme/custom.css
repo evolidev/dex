@@ -72,7 +72,7 @@
 }
 
 .sidebar {
-  @apply min-w-[300px] navbar:!top-0 navbar:!w-80 32xl:!w-full 32xl:!max-w-lg !w-0 !border-none bg-gradient-to-b from-gray-50 to-white flex flex-col h-full !justify-start items-end overflow-x-hidden;
+  @apply min-w-[300px] navbar:!top-0 navbar:!w-80 32xl:!w-full 32xl:!max-w-lg !w-0 bg-gradient-to-b from-gray-50 to-white flex flex-col h-full !justify-start items-end overflow-x-hidden;
 }
 
 .sidebar.open {
@@ -105,7 +105,7 @@ h1 {
 }
 
 .theme .custom-block {
-  @apply shadow-lg shadow-gray-50 border-none rounded-lg;
+  @apply border-none rounded-lg;
 }
 
 a.header-anchor {
@@ -123,6 +123,7 @@ a.header-anchor {
 .table-of-contents a {
   /* @apply text-gray-800 font-medium; */
 }
+
 
 /* a.sidebar-link-item {
   @apply hover:text-purple-600;
