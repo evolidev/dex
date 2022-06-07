@@ -53,3 +53,24 @@ func testArray() [3]uint8 {
 }
 ```
 No worries, Evoli will set the "application/json" header for you.
+
+## Response
+To be more explicit about the response we could return a Response object
+Currently there are three types of responses
+* String
+* Json
+* View
+
+```go
+func testString() StringResponse {
+    return String("hello-world")
+}
+
+func testJson() JsonResponse {
+    return Json(struct{ Test string }{"test"})
+}
+
+func testView() ViewResponse {
+    return View("path.to.view")
+}
+```
