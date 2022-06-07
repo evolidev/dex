@@ -36,3 +36,20 @@ If so you can define it with `router.Any`
 ```go
 router.Any("/test", callback)
 ```
+
+Evoli provide you an easy way to your app to return a json.
+To achieve this your handler should return a struct, slice or array
+```go
+func testStruct() struct{ Test string } {
+    return struct{ Test string }{"test"}
+}
+
+func testSlice() []string {
+    return []string{"hiho"}
+}
+
+func testArray() [3]uint8 {
+    return [3]uint8{255, 255, 255}
+}
+```
+No worries, Evoli will set the "application/json" header for you.
