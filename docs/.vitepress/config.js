@@ -29,6 +29,7 @@ function getGuideSidebar() {
             text: 'The Basics',
             children: [
                 { text: 'Routing', link: '/routing' },
+                { text: 'Cron', link: '/cron' },
             ]
         },
     ]
