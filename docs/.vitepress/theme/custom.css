@@ -72,7 +72,7 @@
 }
 
 .sidebar {
-  @apply min-w-[300px] navbar:!top-0 navbar:!w-80 32xl:!w-full 32xl:!max-w-lg !w-0 bg-gradient-to-b from-gray-50 to-white flex flex-col h-full !justify-start items-end overflow-x-hidden;
+  @apply !border-0 min-w-[300px] navbar:!top-0 navbar:!w-80 32xl:!w-full 32xl:!max-w-lg !w-0 bg-gradient-to-b from-gray-50 to-white flex flex-col h-full !justify-start items-end overflow-x-hidden;
 }
 
 .sidebar.open {
